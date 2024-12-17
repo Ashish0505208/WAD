@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        /* Center the entire body */
+        body {
+            background-color: red;
+            display: flex;
+            justify-content: center;  /* Center horizontally */
+            align-items: center;      /* Center vertically */
+            height: 100vh;            /* Take full viewport height */
+            margin: 0;
+        }
+
+        /* Wrapper for form and media */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+        }
+
+        /* Form styles */
+        .form {
+            margin: 20px;
+            border: solid;
+            border-color: rgb(180, 178, 178);
+            padding: 20px;
+            background-color: white;
+            width: 50%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(4, 224, 4);  /* Green title */
+            margin-bottom: 20px;
+        }
+
+        /* Style for the paragraph elements */
+        .para {
+            margin-bottom: 5px;
+            color: rgb(66, 63, 63);
+            font-size: 14px;
+        }
+
+        /* Style for input fields */
+        .inputf {
+            display: block;  /* Make inputs take the full width */
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: solid;
+            border-color: lightblue;
+            border-radius: 5px;
+            border-width: 2px;
+        }
+
+        /* Style for radio buttons and labels */
+        .inputf[type="radio"], .inputf[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+            margin-right: 5px;
+        }
+
+        /* Style for the select dropdown */
+        select {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 2px solid lightblue;
+        }
+
+        label {
+            margin-left: 5px;
+            font-size: 14px;
+        }
+
+        /* Style for the submit button */
+        .submitbutton {
+            display: block;
+            width: 100px; /* Set width to half of the form */
+            padding: 10px;
+            background-color: #4CAF50;  /* Green background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px auto; /* Center the button horizontally */
+            transition: background-color 0.3s;
+        }
+
+        .submitbutton:hover {
+            background-color: #45a049;  /* Darker green on hover */
+        }
+
+        /* Media styles */
+        .media {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+        }
+
+        audio, video {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left media: Video -->
+        <div class="media">
+            <h2>Video</h2>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+
+        <!-- Center form -->
+        <form class="form">
+            <h1>REGISTRATIONS</h1>
+            <p class="para">First name</p>
+            <input type="text" placeholder="Enter your first name" class="inputf">
+
+            <p class="para">Last name</p>
+            <input type="text" placeholder="Enter your last name" class="inputf">
+
+            <p class="para">Email</p>
+            <input type="email" placeholder="Enter your email" class="inputf">
+
+            <p class="para">Password</p>
+            <input type="password" placeholder="Password" class="inputf">
+
+            <p class="para">Gender</p>
+            <input type="radio" id="male" name="gender" value="male" class="inputf">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female" class="inputf">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other" class="inputf">
+            <label for="other">Other</label>
+
+            <p class="para">Mobile number</p>
+            <input type="tel" placeholder="Mobile number" class="inputf">
+
+            <p class="para">College Preferences</p>
+            <input type="checkbox" id="gitam" name="college" value="GITAM University" class="inputf">
+            <label for="gitam">GITAM University</label><br>
+
+            <input type="checkbox" id="gayatri" name="college" value="Gayatri College" class="inputf">
+            <label for="gayatri">Gayatri College</label><br>
+
+            <input type="checkbox" id="vit" name="college" value="VIT" class="inputf">
+            <label for="vit">VIT</label><br>
+
+            <input type="checkbox" id="srm" name="college" value="SRM University" class="inputf">
+            <label for="srm">SRM University</label><br>
+
+            <input type="checkbox" id="kmrit" name="college" value="KMRIT" class="inputf">
+            <label for="kmrit">KMRIT</label><br>
+
+            <p class="para">Course</p>
+            <select>
+                <option>Select</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>MECH</option>
+                <option>EEE</option>
+            </select>
+            <input type="submit" class="submitbutton">
+        </form>
+
+        <!-- Right media: Audio -->
+        <div class="media">
+            <h2>Audio</h2>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</body>
+</html>
