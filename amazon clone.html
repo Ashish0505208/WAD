@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Amazon Clone</title>
+    <style>
+        .div1 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 350px; /* Set exact width */
+            height: auto; /* Adjust height based on content */
+            border: 1px solid #ccc; /* Optional: to visualize the boundary */
+            padding: 10px; /* Optional: adds inner spacing */
+            box-sizing: border-box; /* Ensures padding is part of width */
+        }
+        .heading {
+            display: block;
+            margin: 0 0 10px 0; /* Add spacing below heading */
+        }
+        .innercontainer-1,
+        .innercontainer-2 {
+            display: flex; /* Align innerdivs side by side */
+            gap: 5px; /* Space between innerdivs */
+        }
+        .innerdiv {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto; /* Prevent shrinking */
+            width: 75%;
+        }
+        .images {
+            width: 75%; /* Scale image size */
+            height: auto;
+        }
+        .textinnerdiv {
+            margin-top: 5px; /* Space between image and text */
+            word-wrap: break-word; /* Ensures long words wrap */
+            overflow-wrap: break-word; /* Modern equivalent */
+            white-space: normal; /* Allows text wrapping */
+        }
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <div class="div1">
+            <div>
+                <p class="heading"><b>Starting &#8377; 149 |</b></p>
+                <p class="heading"><b>Headphones</b></p>
+            </div>
+            <div class="innercontainer-1">
+                <div class="innerdiv">
+                    <img src="PC_QuadCard_boAt_0.5x._SY116_CB553870684_.jpg" class="images">
+                    <p class="textinnerdiv">Starting &#8377;249 | boAt</p>
+                </div>
+                <div class="innerdiv">
+                    <img src="PC_QuadCard_Boult_0.5x._SY116_CB553870684_.jpg" class="images">
+                    <p class="textinnerdiv">Starting &#8377;349 | Boult</p>
+                </div>
+            </div>
+            <div class="innercontainer-2">
+                <div class="innerdiv">
+                    <img src="PC_QuadCard_Noise_0.5x._SY116_CB553870684_.jpg" class="images">
+                    <p class="textinnerdiv">Starting &#8377;649 | Noise</p>
+                </div>
+                <div class="innerdiv">
+                    <img src="PC_QuadCard_Zeb_0.5x_1._SY116_CB570220221_.jpg" class="images">
+                    <p class="textinnerdiv">Starting &#8377;149 | Zebronics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
