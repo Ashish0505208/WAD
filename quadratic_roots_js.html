@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quadratic Equation Solver</title>
+</head>
+<body>
+    <h1>Quadratic Equation Solver</h1>
+    <form onsubmit="return solveEquation()">
+        <p>Enter coefficients:</p>
+        <label>a: <input type="number" id="a" required="required" /></label> x² + 
+        <label>b: <input type="number" id="b" required="required" /></label> x + 
+        <label>c: <input type="number" id="c" required="required" /></label> = 0
+        <br /><br />
+        <button type="submit">Solve</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function solveEquation() {
+            const a = parseFloat(document.getElementById('a').value);
+            const b = parseFloat(document.getElementById('b').value);
+            const c = parseFloat(document.getElementById('c').value);
+
+            // Validate that 'a' is not zero
+            if (a === 0) {
+                document.getElementById('result').innerText = "Coefficient 'a' cannot be zero for a quadratic equation.";
+                return false;
+            }
+
+            const discriminant = b * b - 4 * a * c;
+            let resultText;
+
+            if (discriminant > 0) {
+                const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                resultText = `The roots are real and distinct:<br />Root 1 = ${root1}<br />Root 2 = ${root2}`;
+            } else if (discriminant === 0) {
+                const root = -b / (2 * a);
+                resultText = `The roots are real and identical:<br />Root = ${root}`;
+            } else {
+                resultText = "The equation has no real roots (discriminant < 0).";
+            }
+
+            document.getElementById('result').innerHTML = resultText;
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>
